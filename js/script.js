@@ -106,6 +106,7 @@ const setup = (array) => {
     // })
     // max = priceArray.map((a, b)=> a - b < b)
     // console.log(max);
+    
     //task5 
     array_sale = array.slice(0, array.length - 1)
     array_sale.forEach(item => {
