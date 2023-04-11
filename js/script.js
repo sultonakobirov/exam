@@ -72,12 +72,12 @@ isfresh:false
 
 // X4. Сохранить общую цену со скидкой в переменную`totalSale`
 
-// 5. Сохранить элементы из массива arr с обновленной ценой (цена со скидкой) в переменную array_sale
+// X5. Сохранить элементы из массива arr с обновленной ценой (цена со скидкой) в переменную array_sale
 
 // X6. Сохранить в переменной`average` среднюю цену всех продуктов без скидок
 
 const setup = (array) => {
-    if (discount < 100) {
+    if ( discount > 0 && discount < 100) {
          //task6 
     average = array.reduce((a, b) => a + b.price, 0)
 
@@ -104,9 +104,9 @@ const setup = (array) => {
     //     priceArray.push(i.price)
         
     // })
-    // max = priceArray.map((a, b)=> a - b < b)
+    // max = priceArray
     // console.log(max);
-    
+
     //task5 
     array_sale = array.slice(0, array.length - 1)
     array_sale.forEach(item => {
