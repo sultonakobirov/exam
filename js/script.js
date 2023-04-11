@@ -1,4 +1,4 @@
-let discount =  prompt('Какая скидка?')
+let discount = 10 //prompt('Какая скидка?')
 
 let totalSale = 0
 
@@ -78,7 +78,16 @@ isfresh:false
 
 const setup = (array) => {
     if ( discount > 0 && discount < 100) {
-         //task6 
+          //task1
+    array.forEach(i => {
+        priceArray.push(i.price)
+        
+    })
+    max = array.filter(item => item.price >= priceArray.sort((a, b) => a- b)[priceArray.length - 1])
+    min = array.filter(item => item.price <= priceArray.sort((a, b) => a- b)[0])
+    console.log(max);
+    console.log(min);
+    //task6 
     average = array.reduce((a, b) => a + b.price, 0)
 
     //task3
@@ -98,15 +107,7 @@ const setup = (array) => {
     //task4
     totalSale = total - total / 100 * discount 
     console.log(totalSale);
-
-    //task1
-    // array.forEach(i => {
-    //     priceArray.push(i.price)
-        
-    // })
-    // max = priceArray
-    // console.log(max);
-
+    
     //task5 
     array_sale = array.slice(0, array.length - 1)
     array_sale.forEach(item => {
